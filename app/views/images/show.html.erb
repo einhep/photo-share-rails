@@ -2,7 +2,10 @@
 <p>
 	<b>File:</b>
 	<%= image_tag @image.file.url %>
+	<b>Diaplay: </b>
+	<%= @image.display_id %>
 </p>
 
+<%= link_to 'To Session', @image.display %> |
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
