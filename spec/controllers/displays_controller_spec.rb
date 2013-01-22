@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe DisplaysController do
-  describe 'searching TMDb' do
-    it 'should call the model method that performs TMDb search' do
+  describe 'getting Images' do
+    it 'should get all images in the database' do
 
     end
   end
