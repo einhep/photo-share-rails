@@ -1,7 +1,11 @@
 Psr::Application.routes.draw do
   resources :images
 
-  resources :displays
+  resources :displays do
+    member do
+      get 'images'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
