@@ -11,11 +11,9 @@ describe DisplaysController do
 	end
 
   describe 'GET #images' do
-  	it 'populates an array of images' do
-  		display = Display.create! valid_attributes
-  		get :show, {:id => display}, valid_session
-  		assigns(:images).should eq([display.images])
+  	it 'images should be called on an instance of Display' do
+  		Display.last.should_receive(:images)
+  		get :show, {:id => Display.last}, valid_session
   	end
-  	it 'renders the :images view'
   end
 end
