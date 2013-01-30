@@ -15,5 +15,9 @@ describe DisplaysController do
   		Display.last.should_receive(:images)
   		get :show, {:id => Display.last}, valid_session
   	end
+
+  	it 'should create an array of images' do
+
+  	end
   end
 end
