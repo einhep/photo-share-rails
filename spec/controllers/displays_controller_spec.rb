@@ -17,7 +17,7 @@ describe DisplaysController do
   	end
 
   	it 'should create an array of images' do
-
+      
   	end
   end
 end
