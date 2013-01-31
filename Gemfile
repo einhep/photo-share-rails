@@ -7,6 +7,7 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 gem 'paperclip', '~> 3.0'
+gem 'devise'
 
 
 group :development, :test do
