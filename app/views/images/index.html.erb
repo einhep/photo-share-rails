@@ -9,9 +9,9 @@
 
 <% @images.each do |image| %>
   <tr>
-    <td><%= link_to 'Show', display_image_path(image) %></td>
-    <td><%= link_to edit_display_image_url(image) %></td>
-    <td><%= link_to 'Destroy', display_image_path(image), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Edit', edit_display_image_path(image.display,image) %></td>
+    <td><%= link_to 'Show', url_for([image.display,image]) %></td>
+    <td><%= link_to 'Destroy', url_for([image.display,image]), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

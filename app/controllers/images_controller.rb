@@ -2,7 +2,8 @@ class ImagesController < ApplicationController
   # GET /images
   # GET /images.json
   def index
-    @images = Image.all
+    @display = Display.find(params[:display_id])
+    @images = Image.where("display_id = ?", @display.id)
 
     respond_to do |format|
       format.html # index.html.erb
