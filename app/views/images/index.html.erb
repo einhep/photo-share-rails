@@ -9,13 +9,13 @@
 
 <% @images.each do |image| %>
   <tr>
-    <td><%= link_to 'Show', image %></td>
-    <td><%= link_to 'Edit', edit_image_path(image) %></td>
-    <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', display_image_path(image.display,image) %></td>
+        <td><%= link_to 'Edit', edit_display_image_path(image.display, image) %></td>
+    <td><%= link_to 'Destroy', display_image_path(image.display,image), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Image', new_image_path %>
+<%= link_to 'New Image', new_display_image_path %>

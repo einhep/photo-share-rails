@@ -7,5 +7,5 @@
 </p>
 
 <%= link_to 'To Session', @image.display %> |
-<%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', images_path %>
+<%= link_to 'Edit', edit_display_image_path(@image.display, @image) %> |
+<%= link_to 'Back', display_images_path %>
