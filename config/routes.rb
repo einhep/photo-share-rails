@@ -2,12 +2,8 @@ Psr::Application.routes.draw do
 
   resources :view_sessions
 
-  resources :images
-
   resources :displays do
-    member do
-      get 'images'
-    end
+    resources :images
   end
 
   # The priority is based upon order of creation:
@@ -59,7 +55,8 @@ Psr::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  
+  root :to => 'displays#index'
 
   # See how all your routes lay out with "rake routes"
 

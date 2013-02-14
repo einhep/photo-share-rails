@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106234924) do
+ActiveRecord::Schema.define(:version => 20130131013143) do
 
   create_table "displays", :force => true do |t|
     t.string   "title"
@@ -27,6 +27,12 @@ ActiveRecord::Schema.define(:version => 20130106234924) do
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
     t.integer  "display_id"
+  end
+
+  create_table "view_sessions", :force => true do |t|
+    t.string   "session_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
