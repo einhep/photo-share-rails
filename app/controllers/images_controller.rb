@@ -25,7 +25,8 @@ class ImagesController < ApplicationController
   # GET /images/new
   # GET /images/new.json
   def new
-    @image = Image.new
+    @display = Display.find(params[:display_id])
+    @image ||= @display.image.new
 
     respond_to do |format|
       format.html # new.html.erb
