@@ -1,7 +1,5 @@
 Psr::Application.routes.draw do
 
-  resources :view_sessions
-
   resources :displays do
     resources :images
   end
